@@ -1,6 +1,6 @@
 <?php namespace MyApp\Services;
 
-use Illuminate\Container\Container;
+use Orno\Di\Container;
 
 final class ServiceLoader {
 
@@ -15,7 +15,7 @@ final class ServiceLoader {
 
     public function load($providerClass) {
         /** @var ServiceProvider $provider */
-        $provider = $this->container->make($providerClass);
+        $provider = $this->container->get($providerClass);
         $provider->register();
     }
 }

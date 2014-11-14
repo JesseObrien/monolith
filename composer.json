@@ -1,6 +1,11 @@
 {
-    "require": {
-        "orno/route": "~1.1",
-        "illuminate/container": "~4.2"
+  "require": {
+    "orno/route": "~1.1",
+    "orno/di": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyApp\\": "MyApp/"
     }
+  }
 }
