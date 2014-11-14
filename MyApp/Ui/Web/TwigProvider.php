@@ -1,5 +1,10 @@
 <?php namespace MyApp\Ui\Web;
 
-final class TwigProvider {
+use MyApp\Container\ServiceProvider;
 
+final class TwigProvider implements ServiceProvider {
+
+    public function register() {
+
+    }
 }

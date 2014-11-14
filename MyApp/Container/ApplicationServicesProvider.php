@@ -1,6 +1,6 @@
 <?php namespace MyApp\Container;
 
-final class IlluminateContainerProvider implements ServiceProvider {
+final class ApplicationServicesProvider implements ServiceProvider {
 
     public function register() {
 

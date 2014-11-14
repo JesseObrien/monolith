@@ -1,5 +1,10 @@
 <?php namespace MyApp\Ui\Web;
 
-final class OrnoRouteProvider {
+use MyApp\Container\ServiceProvider;
 
+final class OrnoRouteProvider implements ServiceProvider {
+
+    public function register() {
+
+    }
 }
