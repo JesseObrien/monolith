@@ -1,4 +1,5 @@
 <?php
+
 function dd($var) {
     die(var_dump($var));
 }
@@ -13,6 +14,8 @@ $container = new \Orno\Di\Container();
 $container->singleton('Orno\Http\Request', function () {
     return \Orno\Http\Request::createFromGlobals();
 });
+/** @var \Orno\Http\Request $request */
+$request = $container->get('Orno\Http\Request');
 
 // load services
 $serviceLoader = new \MyApp\Services\ServiceLoader($container);
@@ -22,5 +25,5 @@ $serviceLoader->load(\MyApp\Ui\Web\TwigProvider::class);
 $router = new Orno\Route\RouteCollection;
 $router->get('/', 'MyApp\Ui\Web\Controllers\ExampleController::examplePage');
 $dispatcher = $router->getDispatcher();
-$response = $dispatcher->dispatch('GET', '/');
+$response = $dispatcher->dispatch($request->getMethod(), $request->getRequestUri());
 $response->send();
