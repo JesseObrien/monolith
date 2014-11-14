@@ -1,5 +1,6 @@
 {
     "require": {
-        "orno/route": "~1.1"
+        "orno/route": "~1.1",
+        "illuminate/container": "~4.2"
     }
 }
