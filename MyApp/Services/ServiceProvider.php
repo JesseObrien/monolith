@@ -1,4 +1,4 @@
-<?php namespace MyApp\Container;
+<?php namespace MyApp\Services;
 
 interface ServiceProvider {
     public function register();

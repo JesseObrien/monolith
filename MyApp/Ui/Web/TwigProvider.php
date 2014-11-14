@@ -1,6 +1,6 @@
 <?php namespace MyApp\Ui\Web;
 
-use MyApp\Container\ServiceProvider;
+use MyApp\Services\ServiceProvider;
 
 final class TwigProvider implements ServiceProvider {
 
