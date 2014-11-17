@@ -2,7 +2,7 @@
 
 use Orno\Di\Container;
 
-final class ServiceLoader {
+class ServiceLoader {
 
     /**
      * @var Container
@@ -17,5 +17,9 @@ final class ServiceLoader {
         /** @var ServiceProvider $provider */
         $provider = $this->container->get($providerClass);
         $provider->register();
+    }
+
+    public function container() {
+        return $this->container;
     }
 }

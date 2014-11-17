@@ -19,10 +19,11 @@ $request = $container->get('Orno\Http\Request');
 
 // load services
 $serviceLoader = new \MyApp\Services\ServiceLoader($container);
+$serviceLoader->load(\MyApp\Config\EnvironmentProvider::class);
 $serviceLoader->load(\MyApp\Ui\Web\TwigProvider::class);
 
 // respond to request
-$router = new Orno\Route\RouteCollection;
+$router = new Orno\Route\RouteCollection($container);
 $router->get('/', 'MyApp\Ui\Web\Controllers\ExampleController::examplePage');
 $dispatcher = $router->getDispatcher();
 $response = $dispatcher->dispatch($request->getMethod(), $request->getRequestUri());

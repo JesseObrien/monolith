@@ -1,7 +1,9 @@
 {
   "require": {
     "orno/route": "~1.1",
-    "orno/di": "2.*"
+    "orno/di": "2.*",
+    "orno/config": "1.0.*",
+    "vlucas/phpdotenv": "1.0.*"
   },
   "autoload": {
     "psr-4": {
